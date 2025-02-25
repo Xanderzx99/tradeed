@@ -21,6 +21,18 @@ dependencies = [
     "pydantic-settings<3.0.0,>=2.2.1",
     "sentry-sdk[fastapi]<2.0.0,>=1.40.6",
     "pyjwt<3.0.0,>=2.8.0",
+    "Fredapi",
+    "uvicorn<1.0.0,>=0.27.1",  # ASGI server for FastAPI
+    "starlette<1.0.0,>=0.45.3",  # Required for FastAPI
+    "anyio<5.0.0,>=3.6.2",  # Async support for FastAPI
+    "sniffio<2.0.0,>=1.3.1",  # Async I/O detection
+    "loguru<1.0.0,>=0.7.2",  # Advanced logging
+    "redis<5.0.0,>=4.5.6",  # Redis client for caching and Celery tasks
+    "celery<6.0.0,>=5.3.4",  # Task queue processing
+    "gunicorn<22.0.0,>=21.2.0",  # Production ASGI server
+    "requests<3.0.0,>=2.31.0",  # HTTP requests for external APIs
+    "pytest<9.0.0,>=7.4.3",  # Testing framework
+    "pytest-asyncio<1.0.0,>=0.21.1",  # Async testing for FastAPI
 ]
 
 [tool.uv]
