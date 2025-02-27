@@ -1,11 +1,13 @@
+version: "3.8"
+
 services:
   traefik:
     env_file:
       - .env.traefik
     image: traefik:3.0
     ports:
-      - 80:80
-      - 443:443
+      - "8080:80"    # Map host port 8080 to container's HTTP (port 80)
+      - "8443:443"   # Map host port 8443 to container's HTTPS (port 443)
     restart: always
     labels:
       - traefik.enable=true
